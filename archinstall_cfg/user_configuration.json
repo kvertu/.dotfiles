@@ -1,0 +1,174 @@
+{
+    "additional-repositories": [],
+    "archinstall-language": "Brazilian Portuguese",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
+    "config_version": "3.0.1",
+    "disk_config": {
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/vda",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "43f7b144-1764-4482-bc9f-e881c51d7137",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            },
+                            {
+                                "mountpoint": "/.snapshots",
+                                "name": "@.snapshots"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "b6c8d756-b7cf-41a5-bd27-333ebf2daab6",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 106298343424
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": false
+            }
+        ]
+    },
+    "disk_encryption": null,
+    "hostname": "archlinux",
+    "kernels": [
+        "linux-zen"
+    ],
+    "locale_config": {
+        "kb_layout": "br-abnt2",
+        "sys_enc": "UTF-8",
+        "sys_lang": "pt_BR.UTF-8"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Brazil": [
+                "{\"url\":\"http://archlinux.c3sl.ufpr.br/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/c3sl.ufpr.br/129/\",\"delay\":1024,\"last_sync\":\"2024-12-05T22:59:26Z\",\"duration_avg\":0.8393763242449079,\"duration_stddev\":1.0816605355647244,\"completion_pct\":1.0,\"score\":2}",
+                "{\"url\":\"https://archlinux.c3sl.ufpr.br/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/c3sl.ufpr.br/2078/\",\"delay\":1017,\"last_sync\":\"2024-12-05T22:59:26Z\",\"duration_avg\":1.337688374248418,\"duration_stddev\":0.9957127227500067,\"completion_pct\":1.0,\"score\":3}",
+                "{\"url\":\"http://br.mirrors.cicku.me/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/cicku.me/2118/\",\"delay\":704,\"last_sync\":\"2024-12-05T22:56:17Z\",\"duration_avg\":0.9166394079351701,\"duration_stddev\":0.3961771255079098,\"completion_pct\":0.9829545454545454,\"score\":2}",
+                "{\"url\":\"https://br.mirrors.cicku.me/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/cicku.me/2119/\",\"delay\":709,\"last_sync\":\"2024-12-05T22:56:17Z\",\"duration_avg\":1.0964064846149069,\"duration_stddev\":0.4050822335219518,\"completion_pct\":0.9829545454545454,\"score\":2}",
+                "{\"url\":\"http://mirror.ufam.edu.br/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/ufam.edu.br/1094/\",\"delay\":4497,\"last_sync\":\"2024-12-05T20:57:33Z\",\"duration_avg\":2.2163791611790655,\"duration_stddev\":2.145674957192707,\"completion_pct\":0.9142857142857143,\"score\":6}",
+                "{\"url\":\"http://mirror.ufscar.br/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/ufscar.br/1171/\",\"delay\":91,\"last_sync\":\"2024-12-05T23:02:01Z\",\"duration_avg\":0.5365794508797782,\"duration_stddev\":0.28625149000015226,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"https://mirror.ufscar.br/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Brazil\",\"country_code\":\"BR\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/ufscar.br/1840/\",\"delay\":83,\"last_sync\":\"2024-12-05T23:04:00Z\",\"duration_avg\":0.7424589449709112,\"duration_stddev\":0.30418287929017473,\"completion_pct\":1.0,\"score\":1}"
+            ],
+            "Chile": [
+                "{\"url\":\"http://mirror.ufro.cl/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/ufro.cl/1266/\",\"delay\":6282,\"last_sync\":\"2024-12-05T20:20:00Z\",\"duration_avg\":1.090797650186639,\"duration_stddev\":1.0280129831607234,\"completion_pct\":0.9895833333333334,\"score\":4}",
+                "{\"url\":\"https://mirror.ufro.cl/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/ufro.cl/1267/\",\"delay\":6282,\"last_sync\":\"2024-12-05T20:20:00Z\",\"duration_avg\":1.4669470862338418,\"duration_stddev\":1.0744180070433575,\"completion_pct\":0.9895833333333334,\"score\":4}",
+                "{\"url\":\"http://mirror.anquan.cl/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/anquan.cl/1430/\",\"delay\":7100,\"last_sync\":\"2024-12-05T16:30:21Z\",\"duration_avg\":0.47856003294388455,\"duration_stddev\":0.15532346778325756,\"completion_pct\":1.0,\"score\":3}",
+                "{\"url\":\"https://mirror.anquan.cl/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/anquan.cl/1650/\",\"delay\":7131,\"last_sync\":\"2024-12-05T16:30:21Z\",\"duration_avg\":0.6891997481385866,\"duration_stddev\":0.2919912063476549,\"completion_pct\":1.0,\"score\":3}",
+                "{\"url\":\"http://mirror.hnd.cl/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/hnd.cl/1927/\",\"delay\":20753,\"last_sync\":\"2024-12-05T10:29:56Z\",\"duration_avg\":0.4725111411376433,\"duration_stddev\":0.4884853752783915,\"completion_pct\":1.0,\"score\":7}",
+                "{\"url\":\"https://mirror.hnd.cl/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/hnd.cl/1926/\",\"delay\":20753,\"last_sync\":\"2024-12-05T10:29:56Z\",\"duration_avg\":0.6640621179884131,\"duration_stddev\":0.22297841619579445,\"completion_pct\":1.0,\"score\":7}",
+                "{\"url\":\"http://elmirror.cl/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/elmirror.cl/2041/\",\"delay\":6946,\"last_sync\":\"2024-12-05T20:20:00Z\",\"duration_avg\":0.4316732802174308,\"duration_stddev\":0.12888014253236746,\"completion_pct\":1.0,\"score\":2}",
+                "{\"url\":\"https://elmirror.cl/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Chile\",\"country_code\":\"CL\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/elmirror.cl/2039/\",\"delay\":6945,\"last_sync\":\"2024-12-05T20:20:00Z\",\"duration_avg\":0.9531890208070929,\"duration_stddev\":0.32254414231852313,\"completion_pct\":1.0,\"score\":3}"
+            ],
+            "Ecuador": [
+                "{\"url\":\"http://mirror.cedia.org.ec/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Ecuador\",\"country_code\":\"EC\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/cedia.org.ec/629/\",\"delay\":7050,\"last_sync\":\"2024-12-05T21:21:26Z\",\"duration_avg\":1.605024734224592,\"duration_stddev\":0.8734594740428876,\"completion_pct\":1.0,\"score\":4}"
+            ],
+            "Mexico": [
+                "{\"url\":\"https://arch.jsc.mx/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Mexico\",\"country_code\":\"MX\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/jsc.mx/1519/\",\"delay\":1087,\"last_sync\":\"2024-12-05T22:41:00Z\",\"duration_avg\":0.5867828198454597,\"duration_stddev\":0.27598729892202356,\"completion_pct\":1.0,\"score\":1}",
+                "{\"url\":\"http://lidsol.fi-b.unam.mx/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Mexico\",\"country_code\":\"MX\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/fi-b.unam.mx/2090/\",\"delay\":4078,\"last_sync\":\"2024-12-05T21:21:26Z\",\"duration_avg\":0.8691187625130018,\"duration_stddev\":0.6179314309979348,\"completion_pct\":1.0,\"score\":3}",
+                "{\"url\":\"https://lidsol.fi-b.unam.mx/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Mexico\",\"country_code\":\"MX\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/fi-b.unam.mx/2089/\",\"delay\":4078,\"last_sync\":\"2024-12-05T21:21:26Z\",\"duration_avg\":1.1219096730152767,\"duration_stddev\":0.6384884950584546,\"completion_pct\":1.0,\"score\":3}"
+            ],
+            "Worldwide": [
+                "{\"url\":\"http://mirror.rackspace.com/archlinux/\",\"protocol\":\"http\",\"active\":true,\"country\":\"Worldwide\",\"country_code\":\"\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/rackspace.com/712/\",\"delay\":19276,\"last_sync\":\"2024-12-05T18:29:26Z\",\"duration_avg\":0.3034091268976529,\"duration_stddev\":0.2954688412693964,\"completion_pct\":1.0,\"score\":6}",
+                "{\"url\":\"https://mirror.rackspace.com/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Worldwide\",\"country_code\":\"\",\"isos\":true,\"ipv4\":true,\"ipv6\":false,\"details\":\"https://archlinux.org/mirrors/rackspace.com/1316/\",\"delay\":19459,\"last_sync\":\"2024-12-05T18:29:26Z\",\"duration_avg\":0.2270609438419342,\"duration_stddev\":0.191753321209282,\"completion_pct\":1.0,\"score\":6}",
+                "{\"url\":\"https://ftpmirror.infania.net/mirror/archlinux/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Worldwide\",\"country_code\":\"\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/infania.net/2176/\",\"delay\":5020,\"last_sync\":\"2024-12-05T20:46:01Z\",\"duration_avg\":0.325580507005964,\"duration_stddev\":0.3269075211079819,\"completion_pct\":1.0,\"score\":2}",
+                "{\"url\":\"https://geo.mirror.pkgbuild.com/\",\"protocol\":\"https\",\"active\":true,\"country\":\"Worldwide\",\"country_code\":\"\",\"isos\":true,\"ipv4\":true,\"ipv6\":true,\"details\":\"https://archlinux.org/mirrors/geo.mirror.pkgbuild.com/1721/\",\"delay\":108,\"last_sync\":\"2024-12-05T23:02:26Z\",\"duration_avg\":0.2345755398273468,\"duration_stddev\":0.24782181438775794,\"completion_pct\":1.0,\"score\":1}"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        ""
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "save_config": null,
+    "swap": true,
+    "timezone": "Brazil/West",
+    "uki": false,
+    "version": "3.0.1"
+}
